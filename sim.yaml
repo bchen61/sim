@@ -1,0 +1,75 @@
+---
+#登陆msg方式，发送数据采用SEND方式
+login_type: SEND  
+#登陆msg的用户名
+user: fx_chen1
+#登陆msg的密码
+passwd: fx_chen1
+#日志等级，0:简单模式，1:详细模式
+log_verbose: 1
+
+#要发送数据msg的ip，port
+#msghost: 192.168.100.48:57005 
+msghost: 192.168.100.49:57005 
+#msghost: 192.168.104.168:57005 
+#msghost: 192.168.2.187:7505
+#msghost: 192.168.104.55:7005 
+#msghost: 172.17.33.219:7045 
+#msghost: 192.168.110.101:7045 
+
+#并发数
+send_thread: 1
+#发送模式
+send_type: crazy #sim, record, crazy
+#send_type: sim #sim, record, crazy
+#send_type: record #sim, record, crazy
+#crazy模式下的单次模拟车辆数
+crazy_num: 1
+#sim&record模式下的配置文件，sim模式配置sim号，record下配置拼好的内部协议
+path_sim: ./sim.txt
+#path_sim: ./record.txt
+#path_sim: ./final
+#path_sim: ./sim22060.txt
+#发送总次数
+send_time: 100000000000
+#每轮发送间隔，单位ms
+sleep_time: 1000
+
+#record模式下，每条记录发送间隔，单位ms
+record_sleep: 5000
+
+##以下配置适用于sim&crazy模式
+#oem
+oem: 70104
+#车牌颜色_车牌省份简称
+carid: 2_宁
+#command_type
+command_type: U_REPT    
+#type:0
+key_type: 0
+#数据来源，1:hy808; 2:hy809; 3:yy808; 4:yy809
+src_type: 1 
+
+#经度
+lon: 68874136
+#纬度
+lat: 15422114
+#gps速度
+speed: 400
+#方向
+dir: 10
+#海拔
+altitude: 8000
+#vss速度
+vssspeed: 10
+#基本状态位
+basestatus: 9
+#扩展状态位
+extendstatus: 5
+#报警编码
+alarmcode: 10
+
+#归属地区域码
+local_areacode: 140000
+#实时区域码
+real_areacode: 640102
